@@ -1,0 +1,72 @@
+<section data-header></section>		<!-- Header Section -->
+
+	<div class="content">
+	    <div class="container">
+	        <div class="row">
+				<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+					<ul class="breadcrumb">
+					  <li><a href="/">Home</a></li>
+					  <li><a href="/">Categories</a></li>
+					  <li class="active">{{post.title}}</li> 
+					</ul>
+					<div ng-show="showspinner"><div data-spinner></div></div>	<!-- Spinner -->
+					<div class="post" ng-show="!showspinner">
+						<div class="panel panel-default">
+						    <div class="panel-heading">
+
+						    	<div class="media">								    
+							        <a class="pull-left" href="#">
+							            <img src="./images/wordpress.jpg" class="media-object img-rounded" alt="Sample Image">
+							        </a>								    
+								    <div class="media-body">
+								    	<h3 class="media-heading"><h2>{{post.title}}</h2></h3>
+								    	<cite>by {{post.author}} on {{post.createdOn | date}}</cite>
+								    </div>
+								</div>
+						    </div>
+						    <div class="panel-body">									
+								<div class="post-body">
+									 <div ng-bind-html="post.body"></div>
+								</div>
+								
+								
+ 								<div id="disqus_thread"></div>
+        
+								<!-- <div class="comments" ng-controller="CommentController as commentCtrl">
+								  <button class="fa fa-heart" ng-click="post.likes = post.likes+1"> {{post.likes}}</button>
+								  <h3>Comments</h3>
+								  <ul>
+								   <li ng-repeat="comment in post.comments">
+									 "{{comment.body}}"
+									 <cite>- <b>{{comment.author}}</b></cite>
+								   </li>
+								  </ul>
+								  <form name="commentForm" ng-submit="commentForm.$valid && commentCtrl.addComment(post)" novalidate>
+								  
+									
+									<h4>Add Comment</h4>
+									  <textarea ng-model="commentCtrl.comment.body" cols="30" rows="10" required></textarea>
+									<label for="">by:</label>
+									  <input type="text" ng-model="commentCtrl.comment.author" required placeholder="Name"/>
+									  
+									  <input type="submit" value="Submit" />
+									</form>
+								</div> -->
+							</div>
+							<div class="panel-footer">
+								<nav>
+								  <ul class="pager">
+								    <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+								    <li class="next"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+								  </ul>
+								</nav>
+							</div>
+						</div>
+					</div>					
+				</div>
+				<section data-side-panel></section>		<!-- Side Panel -->
+			</div>
+		</div>
+	</div>
+
+<section data-footer></section>		<!-- Footer Section -->

@@ -1,0 +1,39 @@
+<section data-header></section>		<!-- Header Section -->
+
+<div class="content">
+    <div class="container">
+        <div class="row">
+			<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+				<ul ng-show="breadcrumbthreelevel" class="breadcrumb">	<!-- Show three level breadcrumb -->
+					  <li><a href="/">Home</a></li>
+					  <li><a href="/category/{{cid}}">{{cid}}</a></li>
+					  <li class="active">{{sid}}</li> 
+				</ul>
+				<ul ng-show="breadcrumbtwolevel" class="breadcrumb">	<!-- Show two level breadcrumb -->
+					  <li><a href="/">Home</a></li>
+					  <li class="active">{{cid}}</li> 
+				</ul>
+				<div ng-show="showspinner"><div data-spinner></div></div>
+	            <ul class="post-grid">
+				  <li ng-repeat="post in posts" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" ng-click="selectPost(post)">
+					<div class="post-img-home col-lg-3 col-md-3 col-sm-3 hidden-xs">
+						<img class="post-img-li img-rounded img-responsive" src="./images/wordpress.jpg"></img>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+						<h3>{{post.title}}</h3>
+						<div ng-bind-html="post.body | limitHtml: 70"></div>						
+						<span class="disqus-comment-count" data-disqus-identifier= "{{post.title_tag}}" 
+						class="fa fa-comment push-left"> <!-- {{post.comments.length}} -->
+						</span>
+						<p class="fa fa-heart push-right"> {{post.likes}}
+						</p>
+					</div>
+				  </li>			 
+				</ul>
+			</div>
+			<section data-side-panel></section>		<!-- Side Panel -->
+		</div>
+	</div>
+</div>
+
+<section data-footer></section>		<!-- Footer Section -->

@@ -1,0 +1,47 @@
+<footer class="footerbar">
+  <div class="container">
+    <div class="row">
+      <section class="col-lg-3 col-md-3 col-sm-5 col-xs-5">
+        <h3>Information</h3>
+        <nav role="navigation">
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/archives">Archives</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/copyright">Copyright Policy</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+          </ul>
+        </nav>
+      </section>
+      <section class="col-lg-3 col-md-3 col-sm-5 col-xs-5">
+        <h3>Follow Us</h3>
+        <nav role="navigation">
+          <ul>
+            <li><a href="#"><i class="pull-left sprite sprite-facebook"></i> <span>Facebook</span></a></li>
+            <li><a href="#"><i class="pull-left sprite sprite-twitter"></i> <span>Twitter</span></a></li>
+            <li><a href="#"><i class="pull-left sprite sprite-googleplus"></i> <span>Google Plus</span></a></li>
+            <li><a href="#"><i class="pull-left sprite sprite-rss"></i> <span>Subscribe our feed</span></a></li>
+          </ul>
+        </nav>
+      </section>
+      <section class="email-subscription col-lg-5 col-md-5 col-sm-12 col-xs-12">
+        <form role="form">
+          <h3>E-Mail Subscription</h3>
+          <p>Subscribe to Our newsletter and Get latest updates and tips . ;-)</p>
+          <div class="subscription block">
+            <input type="email" name="email" ng-model="user.email" class="form-control" placeholder="Your email:" required="" autofocus=""></input>
+          </div>
+          <div class="subscription-button">
+          <button class="btn btn-text" type="submit" ng-click="subscribe(user)">Subscribe</button>
+          <button class="btn btn-text" type="submit" ng-click="unsubscribe(user)">UnSubscribe</button>
+          </div>
+        </form>
+      </section>
+    </div>
+    <div class="row">
+      <section class="cpyright-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <span>© 2016 My Blog. All Rights Reserved.</span>
+      </section>
+    </div>
+  </div>
+</footer>

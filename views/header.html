@@ -1,0 +1,116 @@
+<section class="header-section">
+  <header class="topbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h1 class="pull-left"><a href="/">{{titlename}}</a></h1>
+            <nav role='navigation' class="pull-right"><ul><li><a href="/#addpost">Add New Post</a></li></ul></nav> 
+          </div>
+        </div>
+      </div>
+  </header>
+
+  <!--  Navigation bar -->
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+    <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>                        
+      </button>
+      <!-- <a class="navbar-brand" href="#">WebSiteName</a> -->
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Skills
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/category/skills/skill_1">Skill 1</a></li>
+          <li><a href="/category/skills/skill_2">Skill 2</a></li> 
+          <li><a href="/category/skills/skill_3">Skill 3</a></li>
+          <li><a href="/category/skills/skill_4">Skill 4</a></li>
+          <li><a href="/category/skills/skill_5">Skill 5</a></li>
+        </ul>
+        </li>
+        <li><a href="/category/Tips">Tips</a></li> 
+        <li><a href="/#archives">Archieves</a></li> 
+        <li><a href="/category/Freebies">Freebies</a></li>
+        <li><a href="/#contact">Contact Us</a></li> 
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li ng-show="!login"><a href="#" data-toggle="modal" data-target="#signupDialog"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li ng-show="!login"><a href="#" data-toggle="modal" data-target="#loginDialog"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> 
+      </ul>
+    </div>
+    </div>
+  </nav>
+    
+   <!-- Login Popup -->
+        
+  <div id="loginDialog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <form class="form-signin">     
+          <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Login</h4>
+          </div>
+          <div class="modal-body">
+          <div class="wrapper">
+                            
+              <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
+              <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
+              <label class="logincheckbox">
+              <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+              </label>
+              <!-- <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>    -->
+            
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button> 
+          </div>
+
+      </form>
+    </div>
+
+    </div>
+  </div>
+  
+  <!-- Signup Popup -->
+  <div id="signupDialog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+       <form class="form-signin">    
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Signup</h4>
+        </div>
+        <div class="modal-body">
+        <div class="wrapper">
+            <input type="text" class="form-control" name="username" placeholder="User Name" required="" autofocus="" />
+            <input type="email" class="form-control" name="email" placeholder="Email Address" required="" autofocus="" />
+            <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
+            <input type="password" class="form-control" name="confirmpassword" placeholder="Confirm Password" required=""/>
+            <!-- <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>    -->
+            <div class="g-recaptcha" data-sitekey="6Le1LB4TAAAAALHJdQxUanQAfMizo7xWThf5Dh1i"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    </div>
+  </div>
+  
+</section>

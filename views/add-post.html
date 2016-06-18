@@ -1,0 +1,36 @@
+<section data-header></section>   <!-- Header Section -->
+ 
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                <ul class="breadcrumb">
+                  <li><a href="/">Home</a></li>
+                  <li class="active">Add New Post</li> 
+                </ul>
+                <div class="addnewpost">                  
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><h2>Add New Post</h2></h3>
+                    </div>
+                    <div class="panel-body">
+                      <form name="postForm" ng-submit="addPost()" novalidate>
+                        <div text-angular="text-angular" name="htmlcontent" ng-model="htmlcontent" ta-disabled='disabled'></div>
+                        <!-- <h3>Raw HTML in a text area</h3> -->
+                        <!-- <textarea ng-model="htmlcontent" style="width: 100%"></textarea> -->
+                        <label for="">by:</label>
+                        <input type="text" ng-model="post.author" placeholder="Author Name" required/>
+                          
+                        <input type="submit" value="Submit" />
+                      </form>
+                    </div>
+                  </div>
+                </div>
+            </div>
+      <section data-side-panel></section>   <!-- Side Panel -->
+    </div>
+  </div>
+</div>
+
+<section data-footer></section>   <!-- Footer Section -->
+

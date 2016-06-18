@@ -1,0 +1,38 @@
+<section data-header></section>		<!-- Header Section -->
+	
+	<div class="content">
+		<div class="container">
+		  	<div class="row">
+				<div class="post col-lg-7 col-md-7 col-sm-7 col-xs-12">
+					<ul class="breadcrumb">
+					  <li><a href="/">Home</a></li>
+					  <li class="active">Contact Us</li> 
+					</ul>
+					<div class="panel panel-default">
+					  	<div class="panel-heading">
+					    	<h3 class="panel-title"> <h2>Contact Us</h2></h3>
+					  	</div>
+					  	<div class="panel-body">
+			 
+			  
+						  	<form name="postForm" ng-submit="contactUs()">
+								  <h4>Your Name (required)</h4>
+								  <input type="text" ng-model="contact.title" placeholder="Please Enter Your Name" required/>
+								  <label for="">Your Email (required)</label>
+								  <input type="text" ng-model="contact.email" placeholder="Please Enter Your E-Mail" required/>
+								  <label for="">Subject</label>
+								  <input type="text" ng-model="contact.subject" required/>
+								  <h4>Your Message</h4>
+								  <textarea ng-model="contact.body" ng-list="/\n/" rows="10"></textarea>
+								  <input type="submit" value="Submit" />
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<section data-side-panel></section>		<!-- Side Panel -->  
+			</div>
+		</div>
+	</div>
+  
+<section data-footer></section>		<!-- Footer Section -->
